@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
       return { error };
     } catch (error) {
-      return { error };
+      return { error: error as AuthError };
     }
   };
 
