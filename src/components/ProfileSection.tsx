@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import nabhanPfp from '@/images/Nabhan-pfp.jpeg';
+import nabhanPfp from '@/Images/Nabhan-pfp.jpeg';
 
 const ProfileSection: React.FC = () => {
   const ref = useRef(null);
