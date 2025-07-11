@@ -26,6 +26,16 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ mode, slug }) => {
   });
   const [tagInput, setTagInput] = useState('');
 
+  const generateSlug = (title: string) => {
+    return title
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-')     // Replace spaces with -
+      .replace(/-+/g, '-')      // Replace multiple - with single -
+      .trim()                   // Remove whitespace from both ends
+      .replace(/^-+|-+$/g, ''); // Remove - from start and end
+  };
+
   const fetchPost = useCallback(async () => {
     if (!slug) return;
     
@@ -55,7 +65,7 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ mode, slug }) => {
     } finally {
       setLoading(false);
     }
-  }, [slug]);
+  }, [slug, router]);
 
   useEffect(() => {
     // Wait for auth to be fully loaded before making decisions
@@ -72,15 +82,6 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ mode, slug }) => {
       fetchPost();
     }
   }, [mode, slug, isAdmin, router, mounted, authLoading, fetchPost]);
-
-  const generateSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .trim('-');
-  };
 
   const handleSave = async (publishStatus: boolean) => {
     if (!post.title.trim() || !post.content.trim()) {
