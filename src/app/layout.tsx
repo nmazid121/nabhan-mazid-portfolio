@@ -11,6 +11,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Nabhan Mazid - Portfolio",
   description: "Personal portfolio of Nabhan Mazid - founder, researcher, and builder",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
