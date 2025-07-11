@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   description: "Personal portfolio of Nabhan Mazid - founder, researcher, and builder",
   icons: {
     icon: '/favicon.ico',
-  },
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({
@@ -23,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className={`${manrope.variable} font-sans antialiased`}
         suppressHydrationWarning={true}

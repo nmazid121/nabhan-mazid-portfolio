@@ -5,6 +5,7 @@ import Calendar from './Calendar';
 import LoginModal from './LoginModal';
 import BookingModal from './BookingModal';
 import { useAuth } from '@/contexts/AuthContext';
+import Link from 'next/link';
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +78,7 @@ const Sidebar: React.FC = () => {
       `}>
         {/* Name/Homepage button at the top */}
         <div className="mb-8 mt-12 lg:mt-0 pb-6 border-b border-gray-300">
-          <a 
+          <Link 
             href="/"
             className="group block relative"
             onClick={() => setIsOpen(false)}
@@ -95,7 +96,7 @@ const Sidebar: React.FC = () => {
                 mazid
               </h1>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Navigation links */}
@@ -103,7 +104,7 @@ const Sidebar: React.FC = () => {
           <ul className="space-y-3">
             {navLinks.map((link) => (
               <li key={link.name} className="relative">
-                <a
+                <Link
                   href={link.href}
                   className="group block py-1 px-3 text-gray-700 text-sm transition-colors duration-200 relative"
                   onClick={() => setIsOpen(false)}
@@ -115,7 +116,7 @@ const Sidebar: React.FC = () => {
                   <span className="relative z-10 group-hover:text-[#007AFF] transition-colors duration-200">
                     {link.name}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

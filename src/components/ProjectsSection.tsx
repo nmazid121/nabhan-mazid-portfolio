@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaGithub, 
-  FaExternalLinkAlt, 
   FaCode, 
   FaRobot, 
   FaGraduationCap, 
@@ -13,14 +12,8 @@ import {
   FaBook,
   FaDesktop,
   FaMusic,
-  FaMapMarkerAlt,
-  FaChevronDown,
-  FaChevronUp,
   FaStar,
-  FaEye,
   FaCodeBranch,
-  FaCalendarAlt,
-  FaFilter,
   FaSearch,
   FaPython,
   FaJs,

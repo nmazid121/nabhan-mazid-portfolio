@@ -136,7 +136,7 @@ const ProfileSection: React.FC = () => {
           className="text-base lg:text-lg text-gray-700 mb-4 leading-relaxed lowercase"
           variants={paragraphVariants}
         >
-          i'm a cs student @ rutgers, and i'm graduating 2026, {' '}
+          i&apos;m a cs student @ rutgers, and i&apos;m graduating 2026, {' '}
           <motion.span 
             className="font-medium cursor-pointer relative transition-all duration-150"
             style={{ color: '#007AFF' }}
