@@ -48,7 +48,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, selectedDa
     visible: { 
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.3, type: "spring", stiffness: 300 }
+      transition: { duration: 0.3, type: "spring" as const, stiffness: 300 }
     },
     exit: { 
       opacity: 0,
