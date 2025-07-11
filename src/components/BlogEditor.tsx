@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
@@ -26,23 +26,7 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ mode, slug }) => {
   });
   const [tagInput, setTagInput] = useState('');
 
-  useEffect(() => {
-    // Wait for auth to be fully loaded before making decisions
-    if (!mounted || authLoading) return;
-
-    // If user is not admin after auth is loaded, redirect
-    if (!isAdmin) {
-      router.replace('/blog');
-      return;
-    }
-
-    // If we're in edit mode and have a slug, fetch the post
-    if (mode === 'edit' && slug) {
-      fetchPost();
-    }
-  }, [mode, slug, isAdmin, router, mounted, authLoading]);
-
-  const fetchPost = async () => {
+  const fetchPost = useCallback(async () => {
     if (!slug) return;
     
     setLoading(true);
@@ -71,7 +55,23 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ mode, slug }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug]);
+
+  useEffect(() => {
+    // Wait for auth to be fully loaded before making decisions
+    if (!mounted || authLoading) return;
+
+    // If user is not admin after auth is loaded, redirect
+    if (!isAdmin) {
+      router.replace('/blog');
+      return;
+    }
+
+    // If we're in edit mode and have a slug, fetch the post
+    if (mode === 'edit' && slug) {
+      fetchPost();
+    }
+  }, [mode, slug, isAdmin, router, mounted, authLoading, fetchPost]);
 
   const generateSlug = (title: string) => {
     return title

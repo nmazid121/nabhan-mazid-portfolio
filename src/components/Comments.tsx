@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase, Comment } from '@/lib/supabase';
 import { useAuth } from '@/contexts/AuthContext';
@@ -20,12 +20,7 @@ const Comments: React.FC<CommentsProps> = ({ postSlug }) => {
   });
   const { isAdmin, mounted: authMounted } = useAuth();
 
-  useEffect(() => {
-    setMounted(true);
-    fetchComments();
-  }, [postSlug]);
-
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     try {
       // First get the post ID from the slug
       const { data: postData, error: postError } = await supabase
@@ -57,7 +52,12 @@ const Comments: React.FC<CommentsProps> = ({ postSlug }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [postSlug]);
+
+  useEffect(() => {
+    setMounted(true);
+    fetchComments();
+  }, [fetchComments]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
