@@ -90,7 +90,7 @@ const ProjectsSection: React.FC = () => {
     {
       id: 'tajweedai',
       name: 'TajweedAI',
-      description: 'AI Tajweed Assistant for the Ummah - Advanced Arabic speech recognition for Quranic recitation',
+      description: 'Personal Research Project - AI Tajweed Assistant - Advanced Arabic speech recognition for Quranic recitation',
       category: 'ai',
       languages: ['Python'],
       techs: ['Python', 'AI/ML', 'Speech Recognition', 'Arabic NLP'],
@@ -101,7 +101,7 @@ const ProjectsSection: React.FC = () => {
       featured: true,
       stars: 0,
       detailed: {
-        overview: 'Revolutionary AI system that helps Muslims perfect their Quranic recitation by analyzing tajweed rules and providing real-time feedback.',
+        overview: 'Developing an AI system that helps Muslims perfect their Quranic recitation by analyzing tajweed rules and providing real-time feedback.',
         features: [
           'Real-time Arabic speech recognition',
           'Tajweed rule analysis and feedback',
@@ -138,7 +138,7 @@ const ProjectsSection: React.FC = () => {
         ],
         techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Google Maps API', 'Mongoose'],
         challenges: 'Implementing accurate real-time location tracking and optimizing map performance',
-        impact: 'Serving 100+ monthly users, improving campus navigation experience'
+        impact: 'Help students track and find nearby water fountains, improving campus navigation experience'
       }
     },
     {
@@ -166,32 +166,6 @@ const ProjectsSection: React.FC = () => {
         techStack: ['React', 'HTML/CSS', 'Transformers.js', 'NLP', 'Responsive Design'],
         challenges: 'Implementing lightweight AI model for in-browser chat functionality',
         impact: '30% increase in user engagement and improved customer satisfaction'
-      }
-    },
-    {
-      id: 'golem-llm',
-      name: 'Golem LLM',
-      description: 'Forked from golemcloud/golem-llm - Distributed computing for large language models',
-      category: 'ai',
-      languages: ['Rust'],
-      techs: ['Rust', 'Distributed Computing', 'LLMs'],
-      github: 'https://github.com/nmazid121/golem-llm',
-      status: 'Public (Forked)',
-      lastUpdated: 'last week',
-      icon: <FaRobot className="text-orange-600" />,
-      featured: false,
-      stars: 0,
-      detailed: {
-        overview: 'Exploring distributed computing solutions for large language model deployment and optimization.',
-        features: [
-          'Distributed LLM processing',
-          'Scalable cloud infrastructure',
-          'Performance optimization',
-          'Resource management'
-        ],
-        techStack: ['Rust', 'Golem Cloud', 'LLM Infrastructure', 'Distributed Systems'],
-        challenges: 'Understanding complex distributed systems architecture',
-        impact: 'Learning advanced systems programming and cloud computing concepts'
       }
     },
     {
@@ -249,68 +223,14 @@ const ProjectsSection: React.FC = () => {
       }
     },
     {
-      id: 'student-course-tracker',
-      name: 'Student Course Tracker',
-      description: 'Web application for Rutgers students to track courses, schedules, and academic progress',
-      category: 'web',
-      languages: ['PHP'],
-      techs: ['PHP', 'Web Development', 'Database'],
-      github: 'https://github.com/nmazid121/student-course-tracker',
-      status: 'Public',
-      lastUpdated: 'Apr 30',
-      icon: <FaGraduationCap className="text-blue-500" />,
-      featured: false,
-      stars: 0,
-      detailed: {
-        overview: 'Academic management tool specifically designed for Rutgers students to organize courses and track academic progress.',
-        features: [
-          'Course scheduling and management',
-          'Academic progress tracking',
-          'GPA calculation and monitoring',
-          'Semester planning tools',
-          'Rutgers-specific integration'
-        ],
-        techStack: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'Bootstrap'],
-        challenges: 'Integrating with university systems and handling complex scheduling logic',
-        impact: 'Helping students stay organized and on track with their academic goals'
-      }
-    },
-    {
-      id: 'rudining',
-      name: 'RUDining',
-      description: 'Rutgers dining hall information and meal planning application',
-      category: 'utility',
-      languages: ['Python'],
-      techs: ['Python', 'Data Processing', 'Web Scraping'],
-      github: 'https://github.com/nmazid121/RUDining',
-      status: 'Public',
-      lastUpdated: 'Oct 4, 2024',
-      icon: <FaUtensils className="text-green-500" />,
-      featured: false,
-      stars: 0,
-      detailed: {
-        overview: 'Campus dining application providing real-time information about Rutgers dining halls, menus, and meal planning.',
-        features: [
-          'Real-time dining hall hours',
-          'Menu information and updates',
-          'Nutritional information display',
-          'Meal planning assistance',
-          'Dining hall capacity tracking'
-        ],
-        techStack: ['Python', 'Web Scraping', 'Data Processing', 'API Integration'],
-        challenges: 'Reliable data scraping and real-time information updates',
-        impact: 'Helping students make informed dining decisions and plan meals effectively'
-      }
-    },
-    {
       id: 'tajweed-bot',
-      name: 'Tajweed Bot',
-      description: 'Forked from MuazAhmad7/Tajweed-bot - Interactive bot for learning Tajweed rules',
+      name: 'Tajweed Bot / Iqra AI',
+      description: 'Interactive website for learning Tajweed rules + Surah Fatiha demo',
       category: 'ai',
       languages: ['HTML'],
       techs: ['HTML', 'JavaScript', 'Bot Framework'],
-      github: 'https://github.com/nmazid121/Tajweed-bot',
-      status: 'Public (Forked)',
+      github: 'https://github.com/MuazAhmad7/Tajweed-bot',
+      status: 'Public',
       lastUpdated: 'Jun 4',
       icon: <FaRobot className="text-indigo-600" />,
       featured: false,
@@ -326,7 +246,7 @@ const ProjectsSection: React.FC = () => {
         ],
         techStack: ['HTML', 'JavaScript', 'Bot Framework', 'Educational Technology'],
         challenges: 'Making complex Tajweed rules accessible through conversational interface',
-        impact: 'Democratizing access to quality Tajweed education'
+        impact: 'Correct your recitation of Surah Fatiha'
       }
     },
     {
@@ -384,12 +304,12 @@ const ProjectsSection: React.FC = () => {
       }
     },
     {
-      id: 'quran-reviser',
-      name: 'QuranReviser',
-      description: 'LaTeX-based system for creating structured Quran study materials',
+      id: 'quran-revisor',
+      name: 'QuranRevisor',
+      description: 'Python GUI to track visual Revision progress with progrss bars',
       category: 'utility',
-      languages: ['TeX'],
-      techs: ['LaTeX', 'Document Generation', 'Typography'],
+      languages: ['Python'],
+      techs: ['LaTeX', 'Document Generation', 'Python'],
       github: 'https://github.com/nmazid121/QuranReviser',
       status: 'Public',
       lastUpdated: 'May 19, 2023',
@@ -399,13 +319,11 @@ const ProjectsSection: React.FC = () => {
       detailed: {
         overview: 'Professional document generation system for creating high-quality Quran study materials and revision guides.',
         features: [
-          'Professional LaTeX formatting',
-          'Automated document generation',
+          'Input revision data between Juz and Surahs',
+          'View visual process through Progress Bars',
           'Customizable study layouts',
-          'Arabic text rendering',
-          'Print-ready output'
         ],
-        techStack: ['LaTeX', 'TeX', 'Document Processing', 'Typography'],
+        techStack: ['Python'],
         challenges: 'Handling complex Arabic typography and automated layout generation',
         impact: 'Providing professional-quality study materials for Quranic education'
       }
@@ -444,7 +362,7 @@ const ProjectsSection: React.FC = () => {
           projects
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto lowercase">
-          exploring the intersection of technology and social impact through code
+          developing my skills through projects based learning
         </p>
       </motion.div>
 
@@ -754,7 +672,7 @@ const ProjectsSection: React.FC = () => {
       {/* Footer */}
       <motion.div variants={itemVariants} className="text-center py-8 border-t border-gray-200">
         <p className="text-gray-700 lowercase font-medium">
-          building solutions that matter • one project at a time
+          locking in and learning
         </p>
       </motion.div>
     </motion.div>

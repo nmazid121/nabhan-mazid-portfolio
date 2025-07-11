@@ -113,7 +113,7 @@ const BlogSection: React.FC = () => {
             blog
           </h1>
           <p className="text-lg text-gray-600 lowercase">
-            thoughts on ai, healthcare, and building products that matter
+            random thoughts, and documenting the journey
           </p>
         </div>
         <div className="space-y-6">
@@ -198,7 +198,7 @@ const BlogSection: React.FC = () => {
           )}
         </div>
         <p className="text-lg text-gray-600 lowercase">
-          thoughts on ai, healthcare, and building products that matter
+        random thoughts, and documenting the journey
         </p>
       </motion.div>
 

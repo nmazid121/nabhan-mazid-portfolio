@@ -182,7 +182,7 @@ const ResumeSection: React.FC = () => {
           resume
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto lowercase">
-          software engineer & ai enthusiast passionate about building innovative solutions for healthcare and education
+          software engineer & passionate about building ai solutions and tech
         </p>
         
         {/* PDF Download */}
@@ -218,7 +218,7 @@ const ResumeSection: React.FC = () => {
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
            <div className="flex items-center justify-center space-x-2">
              <FaEnvelope className="text-[#007AFF] text-lg" />
-             <span className="text-sm text-gray-800 font-medium">nm1088@scarletmail.rutgers.edu</span>
+             <span className="text-sm text-gray-800 font-medium">nabhanmazid@gmail.com</span>
            </div>
            <div className="flex items-center justify-center space-x-2">
              <FaPhone className="text-[#007AFF] text-lg" />
@@ -484,7 +484,7 @@ const ResumeSection: React.FC = () => {
              {/* Footer */}
        <motion.div variants={itemVariants} className="text-center py-8 border-t border-gray-200">
          <p className="text-gray-700 lowercase font-medium">
-           passionate about leveraging technology to solve real-world problems in healthcare, education, and beyond
+           hire me &lt;3
          </p>
        </motion.div>
     </motion.div>

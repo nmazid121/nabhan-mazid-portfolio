@@ -19,12 +19,11 @@ const Sidebar: React.FC = () => {
     { name: 'blog', href: '/blog' },
     { name: 'resume', href: '/resume' },
     { name: 'projects', href: '/projects' },
-    { name: 'resources', href: '/resources' },
   ];
 
   const socialLinks = [
     { name: 'linkedin', href: 'https://www.linkedin.com/in/nabhan-mazid/' },
-    { name: 'twitter', href: 'https://twitter.com' },
+    { name : 'email', href: 'mailto:nabhanmazid@gmail.com'},
     { name: 'github', href: 'https://github.com/nmazid121' },
   ];
 
@@ -181,6 +180,16 @@ const Sidebar: React.FC = () => {
                 )}
               </div>
             )}
+          </div>
+          {/* Attribution */}
+          <div className="mt-6 text-xs text-gray-500 lowercase">
+            website heavily inspired by{' '}
+            <a
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              pranav patnaik
+            </a>
           </div>
         </div>
       </div>

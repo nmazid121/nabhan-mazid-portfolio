@@ -12,8 +12,7 @@ const ProfileSection: React.FC = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  const fullText = "hi, i'm nabhan 👋";
-  // Use Array.from to properly split Unicode characters including emojis
+  const fullText = "hey, i'm nabhan ✌";
   const letters = Array.from(fullText);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const ProfileSection: React.FC = () => {
 
   // Typewriter effect for subtitle
   useEffect(() => {
-    const text = "founding engineer @ cripsro.ai, utilising ai to help prevent cancer($25m valuation)";
+    const text = "software engineer @ cripsro.ai, utilising ai to help prevent cancer";
     if (isInView && currentIndex < text.length) {
       const timer = setTimeout(() => {
         setDisplayedText((prev) => prev + text[currentIndex]);
@@ -137,7 +136,7 @@ const ProfileSection: React.FC = () => {
           className="text-base lg:text-lg text-gray-700 mb-4 leading-relaxed lowercase"
           variants={paragraphVariants}
         >
-          i make things. my current routine is{' '}
+          i'm a cs student @ rutgers, and i'm graduating 2026, {' '}
           <motion.span 
             className="font-medium cursor-pointer relative transition-all duration-150"
             style={{ color: '#007AFF' }}
@@ -154,8 +153,8 @@ const ProfileSection: React.FC = () => {
               className="absolute inset-x-0 bottom-0 h-0.5 bg-current origin-left"
               transition={{ duration: 0.15 }}
             />
-            reading research papers
-          </motion.span>, building{' '}
+            doing ML research on quranic Pronunciation
+          </motion.span> and building{' '}
           <motion.span 
             className="font-medium cursor-pointer relative transition-all duration-150"
             style={{ color: '#007AFF' }}
@@ -172,8 +171,8 @@ const ProfileSection: React.FC = () => {
               className="absolute inset-x-0 bottom-0 h-0.5 bg-current origin-left"
               transition={{ duration: 0.15 }}
             />
-            projects
-          </motion.span>, then{' '}
+            projects on the side
+          </motion.span>{' '}
           <motion.span 
             className="font-medium cursor-pointer relative transition-all duration-150"
             style={{ color: '#007AFF' }}
@@ -190,8 +189,7 @@ const ProfileSection: React.FC = () => {
               className="absolute inset-x-0 bottom-0 h-0.5 bg-current origin-left"
               transition={{ duration: 0.15 }}
             />
-            posting all about it
-          </motion.span>.
+          </motion.span>
         </motion.p>
         
         {/* Final paragraph */}
@@ -200,7 +198,7 @@ const ProfileSection: React.FC = () => {
           variants={paragraphVariants}
           transition={{ delay: 2.5 }}
         >
-          i also love a good pizza.
+          hit me up if you have project ideas or want to collab
         </motion.p>
       </div>
       
