@@ -254,7 +254,7 @@ const ResumeSection: React.FC = () => {
              <div className="text-right mt-2 lg:mt-0">
                <div className="flex items-center space-x-2 justify-end">
                  <FaCalendarAlt className="text-gray-500 text-sm" />
-                 <p className="text-gray-700 font-medium">Expected May 2026</p>
+                 <p className="text-gray-700 font-medium"></p>
                </div>
              </div>
            </div>
